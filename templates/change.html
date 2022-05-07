@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改</title>
+    {# 导入框架的css #}
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+</head>
+<body style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1111%2F02141Q60635%2F1P214160635-6.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653756313&t=307537ded5422841d9bbff1e4a1b1e7f');
+        background-size: cover;">
+<form style="width:400px; margin: 100px auto" method="post" class="form-floating">
+    <div class="form-floating mb-3">
+        <input type="text"
+               class="form-control"
+               id="exampleInputEmail1"
+               name="phone"
+               placeholder="name@example.com"
+               value="{{ user.phone }}"
+        >
+        <label for="exampleInputEmail1" class="form-label">电话号码</label>
+
+
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="name"
+               placeholder="name@example.com"
+               value="{{ user.name }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">姓名</label>
+
+    </div>
+
+
+    <div class="form-floating mb-3">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="password"
+               placeholder="name@example.com"
+               value="{{ user.password }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">密码</label>
+
+    </div>
+
+    <div class="form-floating mb-3 input-group">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="IDnum"
+               placeholder="name@example.com"
+               value="{{ user.IDnum }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">身份证号</label>
+
+    </div>
+    <div class="form-floating mb-3">
+        {#        <input type="text"#}
+        {#               class="form-control"#}
+        {#               id="exampleInputPassword1"#}
+        {#               name="ADMIN"#}
+        {#               placeholder="name@example.com"#}
+        {#               value="{{ user.ADMIN }}"#}
+        {#        >#}
+        <select name="ADMIN"
+                class="form-select"
+                id="floatingSelect"
+                aria-label="Floating label select example">
+            <option value="{{ user.ADMIN }}" selected>{{ user.ADMIN }}</option>
+            <option value="是">是</option>
+            <option value="否">否</option>
+            #}
+        </select>
+        <label for="exampleInputPassword1" class="form-label">是否管理员</label>
+
+    </div>
+    <div class="form-floating mb-3 input-group">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="balance"
+               placeholder="name@example.com"
+               value="{{ user.balance }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">话费余额</label>
+        <span class="input-group-text" id="basic-addon2">元</span>
+
+    </div>
+    <div class="form-floating mb-3 input-group">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="payable"
+               placeholder="name@example.com"
+               value="{{ user.payable }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">本期应付</label>
+        <span class="input-group-text" id="basic-addon2">元</span>
+
+    </div>
+    <div class="form-floating mb-3 input-group">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="basic_fee"
+               placeholder="name@example.com"
+               value="{{ user.basic_fee }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">月基本费</label>
+        <span class="input-group-text" id="basic-addon2">元</span>
+
+
+    </div>
+    <div class="form-floating mb-3 input-group">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="extra_fee"
+               placeholder="name@example.com"
+               value="{{ user.extra_fee }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">套餐外费用</label>
+        <span class="input-group-text" id="basic-addon2">元</span>
+
+    </div>
+    <div class="form-floating mb-3 input-group">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="basic_call"
+               placeholder="name@example.com"
+               value="{{ user.basic_call }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">套餐含语音通话</label>
+        <span class="input-group-text" id="basic-addon2">分钟</span>
+
+    </div>
+    <div class="form-floating mb-3 input-group">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="basic_traffic"
+               placeholder="name@example.com"
+               value="{{ user.basic_traffic }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">套餐含流量</label>
+        <span class="input-group-text" id="basic-addon2">GB</span>
+
+    </div>
+    <div class="form-floating mb-3 input-group">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="total_call"
+               placeholder="name@example.com"
+               value="{{ user.total_call }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">语音通话总时长</label>
+        <span class="input-group-text" id="basic-addon2">分钟</span>
+
+    </div>
+    <div class="form-floating mb-3 input-group">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="total_traffic"
+               placeholder="name@example.com"
+               value="{{ user.total_traffic }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">流量已使用</label>
+        <span class="input-group-text" id="basic-addon2">GB</span>
+
+    </div>
+    <div class="form-floating mb-3">
+
+        <select name="VPN_service"
+                class="form-select"
+                id="floatingSelect"
+                aria-label="Floating label select example">
+            <option value="{{ user.VPN_service }}" selected>{{ user.VPN_service }}</option>
+            <option value="是">是</option>
+            <option value="否">否</option>
+            #}
+        </select>
+        <label for="exampleInputPassword1" class="form-label">是否开通VPN</label>
+
+    </div>
+    <div class="form-floating mb-3 input-group">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="extra_call"
+               placeholder="name@example.com"
+               value="{{ user.extra_call }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">超出语音</label>
+        <span class="input-group-text" id="basic-addon2">分钟</span>
+
+    </div>
+    <div class="form-floating mb-3 input-group">
+        <input type="text"
+               class="form-control"
+               id="exampleInputPassword1"
+               name="extra_traffic"
+               placeholder="name@example.com"
+               value="{{ user.extra_traffic }}"
+        >
+        <label for="exampleInputPassword1" class="form-label">超出流量</label>
+                <span class="input-group-text" id="basic-addon2">GB</span>
+
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">提交</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户界面</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+</head>
+<body style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1111%2F02141Q60635%2F1P214160635-6.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653756313&t=307537ded5422841d9bbff1e4a1b1e7f');
+        background-size: cover;">
+
+<form style="width:400px; margin: 50px auto" method="post">
+    <div class="container" style="width: auto;margin: auto auto">
+        <div class="row">
+
+            <div class="col-4">
+                <a class="btn btn-primary" href="/admin">返回</a>
+            </div>
+        </div>
+    </div>
+</form>
+<table class="table table-striped"
+       style="width: auto;margin: auto auto">
+    <thead>
+    <tr>
+        <th scope="col">电话号码</th>
+        <th scope="col">姓名</th>
+        <th scope="col">密码</th>
+        <th scope="col">身份证号</th>
+        <th scope="col">是否管理员</th>
+        <th scope="col">￥话费余额</th>
+        <th scope="col">￥本期应付</th>
+        <th scope="col">￥月基本费</th>
+        <th scope="col">￥套餐外费用</th>
+        <th scope="col">套餐含语音通话/min</th>
+        <th scope="col">套餐含流量/GB</th>
+        <th scope="col">语音通话总时长/min</th>
+        <th scope="col">流量已使用/GB</th>
+        <th scope="col">是否开通VPN</th>
+        <th scope="col">超出语音/min</th>
+        <th scope="col">超出流量/GB</th>
+    </tr>
+    </thead>
+    <tbody>
+    {#需要将python的对象数据显示到浏览器上，模板语法
+    比较出名的是jinjia2
+    #}
+
+    {# 从数组中取出数据，slice切片，for循环 #}
+    {#  用法{{ users }} #}
+    {#    {% for user in users %}#}
+    <tr>
+        <th>{{ user.phone }}</th>
+        <th>{{ user.name }}</th>
+        <th>{{ user.password }}</th>
+        <th>{{ user.IDnum }}</th>
+        <th>{{ user.ADMIN }}</th>
+        <th>{{ user.balance }}</th>
+        <th>{{ user.payable }}</th>
+        <th>{{ user.basic_fee }}</th>
+        <th>{{ user.extra_fee }}</th>
+        <th>{{ user.basic_call }}</th>
+        <th>{{ user.basic_traffic }}</th>
+        <th>{{ user.total_call }}</th>
+        <th>{{ user.total_traffic }}</th>
+        <th>{{ user.VPN_service }}</th>
+        <th>{{ user.extra_call }}</th>
+        <th>{{ user.extra_traffic }}</th>
+
+
+{#        <td><a href="/delete?phone={{ user.phone }}">删除</a>#}
+{#            <a href="/change?phone={{ user.phone }}">修改</a>#}
+{#        </td>#}
+    </tr>
+    {#    {% endfor %}#}
+
+    </tbody>
+</table>
+
+
+</body>
+</html>

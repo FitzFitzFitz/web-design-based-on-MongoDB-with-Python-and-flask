@@ -1,0 +1,36 @@
+代码优化
+****提供完全格式化的代码，易于维护
+
+逻辑链路优化
+****将用户登录与管理员登录放在一个界面上，并自动导航至权限所限的页面
+
+功能优化
+****在查询中做了智能聚合查询，输入手机号、姓名、身份证号都可以查到，
+****异地操作：与主机保持同一网络环境即可远程登录，所提供的修改会返回至数据库
+    ****add仅针对手机号进行一个查重
+
+UI优化
+****在add、login、change、search中改用了浮动标签
+    https://bootstrapdoc.com/docs/5.0/forms/floating-labels
+****对含单位的输入项（add和change中）改用了输入组，删除了标签中的单位，
+    https://bootstrapdoc.com/docs/5.0/forms/input-group
+****对”管理员“和”是否开通VPN“字段（add和change中）进行了下拉菜单栏select设计,
+    并提供了能在修改环境下也正确显示的selected默认项
+    https://bootstrapdoc.com/docs/5.0/forms/floating-labels
+****加入了客户登录界面：若管理员字段不为"是"则登录用户界面，展示一个只读页面
+    https://bootstrapdoc.com/docs/5.0/forms/form-control
+    像admin和search界面
+    使用了高级操作：借用redirect路由传参
+****插入了背景图片
+****优化了页面布局并加入了标题
+
+****优化选项图标
+    ****优化表单样式使其在高亮复杂背景图下展现更清晰
+    ****新增file input控件，支持批量插入excel数据
+    https://bootstrapdoc.com/docs/5.0/forms/form-control?
+    ****报错页面优化为警告框
+    ****报错页面优化为提示框
+
+已知的bug：
+****在查询界面若输入名下有多个手机的姓名或身份证号会只返回一个
+

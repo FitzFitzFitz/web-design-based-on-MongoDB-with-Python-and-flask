@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div class="page-header text-center text-primary"
+         style="margin: 40px auto">
+    <h1>
+        运营商信息管理系统
+    </h1>
+    </div>
+    <meta charset="UTF-8">
+    <title>登录</title>
+
+    {# 导入框架的css #}
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+</head>
+
+<body
+
+style="background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F1111%2F02141Q60635%2F1P214160635-6.jpg&refer=http%3A%2F%2Fpic.jj20.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1653756313&t=307537ded5422841d9bbff1e4a1b1e7f');
+        background-size: cover;"
+>
+
+<img src="https://www.189.cn/image/189cnv2/indexv2/img_head/logo.png"
+     alt="加载图片"
+     style=" margin-left:43%;"
+
+>
+
+<form style="width:400px; margin: 1px auto"
+      method="post"
+      class="form-floating">
+    <div class="form-floating mb-3">
+        <input type="text"
+               class="form-control"
+               id="exampleInputEmail1"
+               placeholder="name@example.com"
+               name="phone"
+        >
+        <label for="exampleInputEmail1" class="form-label">手机号</label>
+
+        {#    <div id="emailHelp" class="form-text">我们不会把你的信息与任何人分享</div>#}
+    </div>
+    <div class="form-floating mb-3">
+        <input type="password"
+               class="form-control"
+               id="exampleInputPassword1"
+               placeholder="name@example.com"
+               name="password"
+        >
+        <label for="exampleInputPassword1" class="form-label">密码</label>
+
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">记住我</label>
+    </div>
+    <button type="submit" class="btn btn-primary">提交</button>
+</form>
+</body>
+</html>
